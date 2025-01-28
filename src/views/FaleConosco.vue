@@ -217,6 +217,7 @@ const sendEmail = async (e: Event) => {
     const templateParams = {
       from_name: formData.value.name,
       from_email: formData.value.email,
+      email: formData.value.email,
       message: formData.value.message,
       to_email: 'contato@tchestack.com.br'
     }
