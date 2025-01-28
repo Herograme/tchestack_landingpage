@@ -13,21 +13,24 @@ const cards = [
     description: 'Entregamos soluções rápidas e eficientes, garantindo que seu produto esteja no mercado em pouco tempo.',
     readMoreText: 'Saiba mais',
     iconSrc: speedIcon,
-    iconSrcDark: speedIconDark
+    iconSrcDark: speedIconDark,
+    link: '/produtos'
   },
   {
     title: 'Personalização',
     description: 'Oferecemos soluções personalizadas que se adaptam às necessidades específicas do seu negócio.',
     readMoreText: 'Conheça mais',
     iconSrc: customizationIcon,
-    iconSrcDark: customizationIconDark
+    iconSrcDark: customizationIconDark,
+    link: '/produtos'
   },
   {
     title: 'Inovação',
     description: 'Desenvolvemos soluções inovadoras que impulsionam o crescimento e a eficiência do seu negócio.',
     readMoreText: 'Descubra mais',
     iconSrc: innovationIcon,
-    iconSrcDark: innovationIconDark
+    iconSrcDark: innovationIconDark,
+    link: '/produtos'
   }
 ]
 </script>
