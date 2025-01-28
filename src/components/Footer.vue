@@ -37,10 +37,10 @@ observer.observe(document.documentElement, {
           </p>
 
           <ul class="mt-8 flex gap-6">
-            <!-- LinkedIn 
+            <!-- LinkedIn -->
             <li>
               <a
-                href="https://www.linkedin.com/company/tchestack"
+                href="https://www.linkedin.com/company/tche-stack"
                 rel="noreferrer"
                 target="_blank"
                 class="text-gray-700 dark:text-gray-200 transition hover:opacity-75"
@@ -51,7 +51,7 @@ observer.observe(document.documentElement, {
                 </svg>
               </a>
             </li>
-            -->
+            
 
             <li>
               <a

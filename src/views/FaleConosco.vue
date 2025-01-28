@@ -10,7 +10,7 @@
             Envie uma mensagem
           </h2>
 
-          <form class="space-y-8">
+          <form class="space-y-8" @submit="sendEmail">
             <div class="space-y-2">
               <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
                 Nome completo
@@ -18,7 +18,7 @@
               <input
                 type="text"
                 id="name"
-                name="name"
+                v-model="formData.name"
                 class="block w-full rounded-lg border-0 px-4 py-3 bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-600 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 dark:focus:ring-sky-500 sm:text-sm sm:leading-6 transition-all"
                 placeholder="Digite seu nome"
                 required
@@ -32,7 +32,7 @@
               <input
                 type="email"
                 id="email"
-                name="email"
+                v-model="formData.email"
                 class="block w-full rounded-lg border-0 px-4 py-3 bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-600 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 dark:focus:ring-sky-500 sm:text-sm sm:leading-6 transition-all"
                 placeholder="seu@email.com"
                 required
@@ -45,7 +45,7 @@
               </label>
               <textarea
                 id="message"
-                name="message"
+                v-model="formData.message"
                 rows="6"
                 class="block w-full rounded-lg border-0 px-4 py-3 bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-600 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 dark:focus:ring-sky-500 sm:text-sm sm:leading-6 transition-all resize-none"
                 placeholder="Digite sua mensagem..."
@@ -53,13 +53,47 @@
               ></textarea>
             </div>
 
+            <!-- Mensagens de Feedback -->
+            <div v-if="error" class="rounded-md bg-red-50 dark:bg-red-900/50 p-4">
+              <div class="flex">
+                <div class="flex-shrink-0">
+                  <svg class="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div class="ml-3">
+                  <p class="text-sm text-red-700 dark:text-red-200">{{ error }}</p>
+                </div>
+              </div>
+            </div>
+
+            <div v-if="success" class="rounded-md bg-green-50 dark:bg-green-900/50 p-4">
+              <div class="flex">
+                <div class="flex-shrink-0">
+                  <svg class="h-5 w-5 text-green-400" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div class="ml-3">
+                  <p class="text-sm text-green-700 dark:text-green-200">
+                    Mensagem enviada com sucesso! Entraremos em contato em breve.
+                  </p>
+                </div>
+              </div>
+            </div>
+
             <button
               type="submit"
+              :disabled="loading"
               class="w-full flex justify-center items-center gap-2 py-3 px-6 rounded-lg text-sm font-semibold text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 transition-all shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <span>Enviar mensagem</span>
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <span>{{ loading ? 'Enviando...' : 'Enviar mensagem' }}</span>
+              <svg v-if="!loading" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+              <svg v-else class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
               </svg>
             </button>
           </form>
@@ -73,7 +107,7 @@
               Atendimento via WhatsApp
             </h3>
             <a
-              href="https://wa.me/5551999999999"
+              href="https://wa.me/5551981209926"
               target="_blank"
               rel="noopener noreferrer"
               class="flex items-center justify-between gap-4 p-4 bg-green-500 hover:bg-green-600 text-white rounded-lg transition-all group"
@@ -97,7 +131,7 @@
             </h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <a
-                href="#"
+                href="https://www.linkedin.com/company/tche-stack"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="flex items-center justify-between gap-3 p-4 bg-[#0A66C2] hover:bg-[#004182] text-white rounded-lg transition-all group"
@@ -114,7 +148,7 @@
               </a>
 
               <a
-                href="#"
+                href="https://www.instagram.com/tchestack"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="flex items-center justify-between gap-3 p-4 bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737] hover:from-[#722F9A] hover:via-[#E31A1A] hover:to-[#DE6C32] text-white rounded-lg transition-all group"
@@ -156,4 +190,53 @@
       </div>
     </div>
   </div>
-</template> 
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue'
+import emailjs from '@emailjs/browser'
+
+const loading = ref(false)
+const success = ref(false)
+const error = ref('')
+
+const formData = ref({
+  name: '',
+  email: '',
+  message: ''
+})
+
+const sendEmail = async (e: Event) => {
+  e.preventDefault()
+  loading.value = true
+  error.value = ''
+  
+  try {
+    const templateParams = {
+      from_name: formData.value.name,
+      from_email: formData.value.email,
+      message: formData.value.message,
+      to_email: 'contato@tchestack.com.br'
+    }
+
+    await emailjs.send(
+      'service_yp7vrjv', // Substitua pelo seu Service ID
+      'template_w2m5t47', // Substitua pelo seu Template ID
+      templateParams,
+      'KM2oA9qpJqYseXpiT' // Substitua pela sua Public Key
+    )
+
+    success.value = true
+    formData.value = {
+      name: '',
+      email: '',
+      message: ''
+    }
+  } catch (err) {
+    error.value = 'Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.'
+    console.error('ERRO:', err)
+  } finally {
+    loading.value = false
+  }
+}
+</script> 
