@@ -40,11 +40,11 @@ onMounted(() => {
             </div>
 
             <div class="hidden sm:block">
-              <nav class="flex h-16 items-center" aria-label="Tabs">
-                <a
-                  href="#"
-                  class="inline-flex h-full items-center gap-2 border-b-2 border-sky-500 px-4 text-sm font-medium text-sky-600 dark:text-sky-400"
-                  aria-current="page"
+              <nav class="flex h-16 items-center space-x-8" aria-label="Tabs">
+                <router-link
+                  to="/"
+                  class="inline-flex h-full items-center gap-2 border-b-2 px-1"
+                  :class="$route.path === '/' ? 'border-sky-500 text-sky-600 dark:text-sky-400' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -61,11 +61,12 @@ onMounted(() => {
                     />
                   </svg>
                   Home
-                </a>
+                </router-link>
 
-                <a
-                  href="#"
-                  class="inline-flex h-full items-center gap-2 border-b-2 border-transparent px-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
+                <router-link
+                  to="/sobre"
+                  class="inline-flex h-full items-center gap-2 border-b-2 px-1"
+                  :class="$route.path === '/sobre' ? 'border-sky-500 text-sky-600 dark:text-sky-400' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -82,11 +83,12 @@ onMounted(() => {
                     />
                   </svg>
                   Sobre
-                </a>
+                </router-link>
 
-                <a
-                  href="#"
-                  class="inline-flex h-full items-center gap-2 border-b-2 border-transparent px-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
+                <router-link
+                  to="/produtos"
+                  class="inline-flex h-full items-center gap-2 border-b-2 px-1"
+                  :class="$route.path === '/produtos' ? 'border-sky-500 text-sky-600 dark:text-sky-400' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -99,15 +101,16 @@ onMounted(() => {
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                      d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"
                     />
                   </svg>
-                  Contato
-                </a>
+                  Produtos
+                </router-link>
 
-                <a
-                  href="#"
-                  class="inline-flex h-full items-center gap-2 border-b-2 border-transparent px-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
+                <router-link
+                  to="/fale-conosco"
+                  class="inline-flex h-full items-center gap-2 border-b-2 px-1"
+                  :class="$route.path === '/fale-conosco' ? 'border-sky-500 text-sky-600 dark:text-sky-400' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +127,7 @@ onMounted(() => {
                     />
                   </svg>
                   Fale Conosco
-                </a>
+                </router-link>
               </nav>
             </div>
 
