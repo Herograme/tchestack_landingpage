@@ -37,6 +37,7 @@ observer.observe(document.documentElement, {
           </p>
 
           <ul class="mt-8 flex gap-6">
+            <!-- LinkedIn 
             <li>
               <a
                 href="https://www.linkedin.com/company/tchestack"
@@ -50,6 +51,7 @@ observer.observe(document.documentElement, {
                 </svg>
               </a>
             </li>
+            -->
 
             <li>
               <a
@@ -91,7 +93,7 @@ observer.observe(document.documentElement, {
           <p class="font-medium text-gray-900 dark:text-white">Contato</p>
           <ul class="mt-6 space-y-4 text-sm">
             <li>
-              <a href="https://wa.me/5551999999999" class="text-gray-700 dark:text-gray-300 transition hover:opacity-75">WhatsApp</a>
+              <a href="https://wa.me/5551981209926" class="text-gray-700 dark:text-gray-300 transition hover:opacity-75">WhatsApp</a>
             </li>
             <li>
               <a href="mailto:contato@tchestack.com.br" class="text-gray-700 dark:text-gray-300 transition hover:opacity-75">Email</a>
