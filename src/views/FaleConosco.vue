@@ -196,6 +196,8 @@
 import { ref } from 'vue'
 import emailjs from '@emailjs/browser'
 
+const { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } = import.meta.env
+
 const loading = ref(false)
 const success = ref(false)
 const error = ref('')
@@ -220,10 +222,10 @@ const sendEmail = async (e: Event) => {
     }
 
     await emailjs.send(
-      'service_yp7vrjv', // Substitua pelo seu Service ID
-      'template_w2m5t47', // Substitua pelo seu Template ID
+      SERVICE_ID,
+      TEMPLATE_ID,
       templateParams,
-      'KM2oA9qpJqYseXpiT' // Substitua pela sua Public Key
+      PUBLIC_KEY
     )
 
     success.value = true
