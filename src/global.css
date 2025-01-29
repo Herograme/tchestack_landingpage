@@ -1,3 +1,30 @@
 @import 'tailwindcss';
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+/* Adiciona transição suave para todas as propriedades que mudam com o tema */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Exceções para elementos que não devem ter transição */
+.no-transition,
+.no-transition * {
+  transition: none !important;
+}
+
+/* Otimização: remove transição de alguns elementos específicos */
+.transition-none {
+  transition: none;
+}
+
+/* Opcional: transições personalizadas para elementos específicos */
+.theme-transition-slow {
+  transition-duration: 300ms;
+}
+
+.theme-transition-fast {
+  transition-duration: 150ms;
+}

@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { scrollToTop } from '../util/toppage'
 import Home from '../views/Home.vue'
 
 const router = createRouter({
@@ -33,10 +34,18 @@ const router = createRouter({
       path: '/suporte',
       name: 'suporte',
       component: () => import('../views/Suporte.vue')
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
+      component: () => import('../views/NotFound.vue')
     }
-
-
   ]
+})
+
+// Adiciona o scroll to top após cada navegação
+router.afterEach(() => {
+  scrollToTop()
 })
 
 export default router 
