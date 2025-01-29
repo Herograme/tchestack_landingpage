@@ -99,7 +99,7 @@ observer.observe(document.documentElement, {
               <a href="mailto:contato@tchestack.com.br" class="text-gray-700 dark:text-gray-300 transition hover:opacity-75">Email</a>
             </li>
             <li>
-              <a href="/suporte" target="_blank" class="text-gray-700 dark:text-gray-300 transition hover:opacity-75">Suporte</a>
+              <router-link to="/suporte" class="text-gray-700 dark:text-gray-300 transition hover:opacity-75">Suporte</router-link>
             </li>
             <li>
               <router-link to="/faq" class="text-gray-700 dark:text-gray-300 transition hover:opacity-75">FAQ</router-link>
