@@ -43,7 +43,7 @@ const router = createRouter({
   ]
 })
 
-// Adiciona o scroll to top após cada navegação
+// Adiciona o scroll to top e reseta a transição após cada navegação
 router.afterEach(() => {
   scrollToTop()
 })

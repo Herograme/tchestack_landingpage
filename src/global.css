@@ -28,3 +28,22 @@
 .theme-transition-fast {
   transition-duration: 150ms;
 }
+
+/* Otimizações para touch */
+@media (hover: none) {
+  .touch-feedback {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Animação de ripple */
+@keyframes ripple {
+  from {
+    transform: scale(0);
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}

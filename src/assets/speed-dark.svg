@@ -1,47 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   version="1.1"
-   id="svg411"
-   xml:space="preserve"
-   width="32"
-   height="32"
-   viewBox="0 0 32 32"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"><defs
-     id="defs415"><clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clipPath425"><path
-         d="M 0,24 H 24 V 0 H 0 Z"
-         id="path423" /></clipPath></defs><g
-     id="g417"
-     transform="matrix(1.3333333,0,0,-1.3333333,0,32)"><g
-       id="g419"><g
-         id="g421"
-         clip-path="url(#clipPath425)"><g
-           id="g427"
-           transform="translate(0,1)"><path
-             d="M 0,0 H 10"
-             style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-             id="path429" /></g><g
-           id="g431"
-           transform="translate(0,5)"><path
-             d="M 0,0 H 8"
-             style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-             id="path433" /></g><g
-           id="g435"
-           transform="translate(0,9)"><path
-             d="M 0,0 H 6"
-             style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-             id="path437" /></g><g
-           id="g439"
-           transform="translate(12,24)"><path
-             d="m 0,0 c -6.617,0 -12,-5.383 -12,-12 h 2 c 0,5.514 4.486,10 10,10 5.514,0 10,-4.486 10,-10 0,-5.514 -4.486,-10 -10,-10 v -2 c 6.617,0 12,5.383 12,12 C 12,-5.383 6.617,0 0,0"
-             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="path441" /></g><g
-           id="g443"
-           transform="translate(11,17)"><path
-             d="M 0,0 V -5.414 L 3.293,-8.707 4.707,-7.293 2,-4.586 V 0 Z"
-             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="path445" /></g></g></g></g></svg>
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_2_51)">
+<mask id="mask0_2_51" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
+<path d="M0 -9.53674e-07H32V32H0V-9.53674e-07Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_2_51)">
+<path d="M0 30.6667H13.3333" stroke="white" stroke-width="2.66667" stroke-miterlimit="10"/>
+<path d="M0 25.3333H10.6667" stroke="white" stroke-width="2.66667" stroke-miterlimit="10"/>
+<path d="M0 20H8" stroke="white" stroke-width="2.66667" stroke-miterlimit="10"/>
+<path d="M16 -9.53674e-07C7.17733 -9.53674e-07 0 7.17733 0 16H2.66667C2.66667 8.648 8.648 2.66667 16 2.66667C23.352 2.66667 29.3333 8.648 29.3333 16C29.3333 23.352 23.352 29.3333 16 29.3333V32C24.8227 32 32 24.8227 32 16C32 7.17733 24.8227 -9.53674e-07 16 -9.53674e-07Z" fill="white"/>
+<path d="M14.6667 9.33335V16.552L19.0573 20.9427L20.9427 19.0574L17.3333 15.448V9.33335H14.6667Z" fill="white"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_2_51">
+<rect width="32" height="32" fill="white"/>
+</clipPath>
+</defs>
+</svg>
