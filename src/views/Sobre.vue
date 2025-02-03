@@ -1,5 +1,13 @@
+<script setup lang="ts">
+import { useHead } from '@unhead/vue'
+import { sobreSeo } from '../seo.config'
+
+useHead(sobreSeo)
+</script>
+
 <template>
   <div class="min-h-screen bg-white dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
+
     <div class="max-w-7xl mx-auto">
       <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-8">Sobre Nós</h1>
       <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-8 shadow-sm">

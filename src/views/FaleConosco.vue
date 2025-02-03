@@ -195,8 +195,12 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import emailjs from '@emailjs/browser'
+import { useHead } from '@unhead/vue'
+import { contactSeo } from '../seo.config'
 
 const { VITE_SERVICE_ID, VITE_TEMPLATE_ID, VITE_PUBLIC_KEY  } = import.meta.env
+
+useHead(contactSeo)
 
 const loading = ref(false)
 const success = ref(false)
